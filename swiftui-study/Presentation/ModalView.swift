@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ModalView.swift
 //  swiftui-study
 //
 //  Created by murata on 2020/09/05.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ModalView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("This is Modal")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ModalView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ModalView()
     }
 }

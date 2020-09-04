@@ -15,6 +15,8 @@
 		FB9257EE2502EF4D00119314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB9257EC2502EF4D00119314 /* LaunchScreen.storyboard */; };
 		FB9257F92502EF4E00119314 /* swiftui_studyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9257F82502EF4E00119314 /* swiftui_studyTests.swift */; };
 		FB9258042502EF4E00119314 /* swiftui_studyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9258032502EF4E00119314 /* swiftui_studyUITests.swift */; };
+		FB9258122502F0E100119314 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9258112502F0E100119314 /* ModalView.swift */; };
+		FB9258152502F25C00119314 /* PushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9258142502F25C00119314 /* PushView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FB9257FF2502EF4E00119314 /* swiftui-studyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-studyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9258032502EF4E00119314 /* swiftui_studyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_studyUITests.swift; sourceTree = "<group>"; };
 		FB9258052502EF4E00119314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB9258112502F0E100119314 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		FB9258142502F25C00119314 /* PushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,9 @@
 		FB9257E02502EF4D00119314 /* swiftui-study */ = {
 			isa = PBXGroup;
 			children = (
+				FB9258132502F11200119314 /* Presentation */,
 				FB9257E12502EF4D00119314 /* AppDelegate.swift */,
 				FB9257E32502EF4D00119314 /* SceneDelegate.swift */,
-				FB9257E52502EF4D00119314 /* ContentView.swift */,
 				FB9257E72502EF4D00119314 /* Assets.xcassets */,
 				FB9257EC2502EF4D00119314 /* LaunchScreen.storyboard */,
 				FB9257EF2502EF4D00119314 /* Info.plist */,
@@ -134,6 +138,16 @@
 				FB9258052502EF4E00119314 /* Info.plist */,
 			);
 			path = "swiftui-studyUITests";
+			sourceTree = "<group>";
+		};
+		FB9258132502F11200119314 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FB9257E52502EF4D00119314 /* ContentView.swift */,
+				FB9258112502F0E100119314 /* ModalView.swift */,
+				FB9258142502F25C00119314 /* PushView.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +283,8 @@
 			files = (
 				FB9257E22502EF4D00119314 /* AppDelegate.swift in Sources */,
 				FB9257E42502EF4D00119314 /* SceneDelegate.swift in Sources */,
+				FB9258152502F25C00119314 /* PushView.swift in Sources */,
+				FB9258122502F0E100119314 /* ModalView.swift in Sources */,
 				FB9257E62502EF4D00119314 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
