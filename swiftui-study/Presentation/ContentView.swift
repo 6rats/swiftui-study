@@ -15,30 +15,36 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                VStack {
-                    Text("Hello, World!")
-                    Button(
-                        action: {
-                            self.isShowingModal.toggle()
-                    }) {
-                        Text("Modal")
-                    }.sheet(isPresented: self.$isShowingModal) {
-                        ModalView()
+            GeometryReader { geometry in
+                ZStack {
+                    VStack {
+                        Text("Hello, World!")
+                        Button(
+                            action: {
+                                self.isShowingModal.toggle()
+                        }) {
+                            Text("Modal")
+                        }.sheet(isPresented: self.$isShowingModal) {
+                            ModalView()
+                        }
+                        NavigationLink(destination: PushView()) {
+                            Text("Push")
+                        }
+                        Button(
+                            action: {
+                                self.isShowingEmpty.toggle()
+                        }) {
+                            Text("Empty Switch")
+                        }
+                    }.frame(width: geometry.size.width,
+                        height: geometry.size.height)
+                    if self.isShowingEmpty {
+                        Text("Empty")
+                            .frame(width: geometry.size.width,
+                                   height: geometry.size.height)
+                            .background(Color.white)
                     }
-                    NavigationLink(destination: PushView()) {
-                        Text("Push")
-                    }
-                    Button(
-                        action: {
-                            self.isShowingEmpty.toggle()
-                    }) {
-                        Text("Empty Switch")
-                    }
-                }
-                if isShowingEmpty {
-                    Text("Empty")
-                }
+                }.background(Color.gray)
             }
         }
     }
