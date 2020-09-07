@@ -11,21 +11,33 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isShowingModal = false
+    @State private var isShowingEmpty = false
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Hello, World!")
-                Button(
-                    action: {
-                        self.isShowingModal.toggle()
-                }) {
-                    Text("Modal")
-                }.sheet(isPresented: self.$isShowingModal) {
-                    ModalView()
+            ZStack {
+                VStack {
+                    Text("Hello, World!")
+                    Button(
+                        action: {
+                            self.isShowingModal.toggle()
+                    }) {
+                        Text("Modal")
+                    }.sheet(isPresented: self.$isShowingModal) {
+                        ModalView()
+                    }
+                    NavigationLink(destination: PushView()) {
+                        Text("Push")
+                    }
+                    Button(
+                        action: {
+                            self.isShowingEmpty.toggle()
+                    }) {
+                        Text("Empty Switch")
+                    }
                 }
-                NavigationLink(destination: PushView()) {
-                    Text("Push")
+                if isShowingEmpty {
+                    Text("Empty")
                 }
             }
         }
